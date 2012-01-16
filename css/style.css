@@ -33,27 +33,33 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+body {
+	margin: 0 auto;
+	font-size: 1em;
+	line-height: 1.4;
+	width: 940px;
+	padding: 10px 30px;
+}
 
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: georgia; color: #666; }
 
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
+ * Also: hot pink! (or customize the ground color to match your design)
  */
 
-::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::-moz-selection { background: #fddbc4; color: #000; text-shadow: none; }
+::selection { background: #fddbc4; color: #000; text-shadow: none; }
 
 
 /* =============================================================================
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #f30; text-decoration: none;}
+a:visited { color: #f30; }
+a:hover { color: #00e; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -198,8 +204,15 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
    Tables
    ========================================================================== */
 
-table { border-collapse: collapse; border-spacing: 0; }
-td { vertical-align: top; }
+table { 
+  border-collapse: collapse; 
+	border-spacing: 0;
+}
+td { 
+  vertical-align: top;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
 
 
 /* ==|== primary styles =====================================================
@@ -262,7 +275,7 @@ td { vertical-align: top; }
 /* Contain floats: h5bp.com/q */
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
-.clearfix { *zoom: 1; }
+.clearfix { zoom: 1; }
 
 
 
@@ -286,14 +299,105 @@ td { vertical-align: top; }
   h2, h3 { page-break-after: avoid; }
 }
 
-/* POSITIONING */
+/* LB CUSTOM*/
 header {
-	padding: 20px;
+	padding: 0px;
+	margin: 0px;
 }
-
-.header-logo {
+#header-left {
 	float: left;
 }
-.header-text {
+#header-right {
 	float: right;
+	text-align: right;
+	padding: 6px 0px 0px 0px;
+}
+#contact {
+  font-size: .76em;
+	padding-bottom: 8px;
+	text-align: right;
+}
+#nav-bar {
+}
+.nav-item {
+  float: left;
+  width: 16.6667%;
+  text-align: center;
+}
+#content {
+	padding: 20px 0px 0px 0px;
+}
+#content-left {
+  float: left;
+	width: 50%;
+}
+#content-right {
+  float: right;
+	width: 40%;
+	padding-right: 4%;
+	background-image: url(../img/center-background-store.jpg);
+	height: 372px;
+}
+#content-nav {
+  height: 192px;
+	background-color: #ccc;
+	margin-top: 12px;
+	text-align: center;
+}
+.content-nav-item {
+	float: left;
+	border: 1px #f30;
+	position: relative; 
+	top: 14%;
+	padding-left: 1.96%;
+}
+#footer-jc {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+#footer-jc-left {
+	float: left;
+	width: 40%;
+	text-align: left;
+	padding-left: 10%;
+}
+#footer-jc-right {
+	float: right;
+	width: 36%;
+	text-align: left;
+	padding-left: 14%;
+}
+#footer-store-info {
+  float: right;
+	width: 50%;
+	text-align: center;
+}
+#footer-store-info-left {
+	float: left;
+	width: 50%;
+	text-align: center;
+}
+#footer-store-info-right {
+	float: right;
+	width: 46%;
+	padding-left: 4%;
+	text-align: center;
+	font-size: .76em;
+}
+h1 {
+	font-size: 1.28em;
+	text-align: center;
+}
+h2 {
+  color: #6C1300;
+}
+#bottom-nav {
+	font-size: .76em;
+}
+#bottom-nav-left {
+  float: left;
+}
+#bottom-nav-right {
+  float: right;
 }
