@@ -33,14 +33,6 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body {
-	margin: 0 auto;
-	font-size: 1em;
-	line-height: 1.4;
-	width: 940px;
-	padding: 10px 30px;
-}
-
 body, button, input, select, textarea { font-family: georgia; color: #666; }
 
 /*
@@ -59,7 +51,7 @@ body, button, input, select, textarea { font-family: georgia; color: #666; }
 
 a { color: #f30; text-decoration: none;}
 a:visited { color: #f30; }
-a:hover { color: #00e; }
+a:hover { color: #800000; }
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -209,9 +201,10 @@ table {
 	border-spacing: 0;
 }
 td { 
-  vertical-align: top;
+  text-align: left;
+	vertical-align: top;
 	padding-bottom: 10px;
-	padding-left: 10px;
+	padding-right: 10px;
 }
 
 
@@ -300,60 +293,170 @@ td {
 }
 
 /* LB CUSTOM*/
-header {
-	padding: 0px;
-	margin: 0px;
+body {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+	width: 100%;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;	
+  font-size: 1em;
+  line-height: 1.4;
+  background: url(../img/lb-bg.jpg) top left repeat;
+	height: 1014px;
 }
+.canvas {
+	width: 940px;
+	height: 1014px;
+	margin: 0px auto;
+  padding: 0px 10px;
+  background-color: white;
+}
+header {
+	position: absolute;
+	width: 940px;
+	top: 0px;
+	padding-top: 10px;
+}
+#content {
+	position: relative;
+	width: 940px;
+	top: 108px;
+	padding: 20px 0px;
+}
+footer {
+  position: absolute;
+	width: 940px;
+	bottom: 0px;
+}
+
+
+/* canvas borders */
+.container {
+  position: relative;
+}
+.left-vert-bar {
+  position: absolute;
+	left: -22px;
+  width: 12px;
+	height: 1014px;
+  background: url(../img/lb-bg-left.jpg) top left repeat-y;
+}
+.right-vert-bar {
+  position: absolute;
+	right: -22px;
+  width: 12px;
+	height: 1014px;
+	background: url(../img/lb-bg-right.jpg) top left repeat-y;
+}
+/*
+.horiz-span {
+	position: absolute;
+	left: 0px;
+	width: 100%;
+	padding: 10px 0px;
+	background: #EFEFEF left repeat;
+}
+*/
+
+/* header */
 #header-left {
 	float: left;
 }
 #header-right {
 	float: right;
 	text-align: right;
-	padding: 6px 0px 0px 0px;
 }
 #contact {
-  font-size: .76em;
-	padding-bottom: 8px;
+  font-size: .88em;
+	padding-top: 8px;
 	text-align: right;
 }
 #nav-bar {
+	clear: both;
 }
 .nav-item {
   float: left;
-  width: 16.6667%;
+  width: 16.667%;
   text-align: center;
 }
-#content {
-	padding: 20px 0px 0px 0px;
+
+/* content */
+#content-main-container {
+	position: relative;
+	width: 938px;
+	height: 412px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.content-main {
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
 }
 #content-left {
   float: left;
-	width: 50%;
+	width: 475px;
+	height: 372px;
 }
 #content-right {
   float: right;
-	width: 40%;
-	padding-right: 4%;
-	background-image: url(../img/center-background-store.jpg);
-	height: 372px;
+	width: 368px;
+	padding: 20px 10px 20px 40px;
+	height: 332px;
+}
+#home-wedding {
+  background: url(../img/home-wedding-bg.jpg) no-repeat;	
 }
 #content-nav {
-  height: 192px;
-	background-color: #ccc;
-	margin-top: 12px;
+	position: absolute;
+	width: 938px;
+	height: 182px;
+	top: 432px;
 	text-align: center;
+	margin-top: 10px;
+  border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	background: #F2F2F2;
 }
 .content-nav-item {
 	float: left;
-	border: 1px #f30;
-	position: relative; 
-	top: 14%;
-	padding-left: 1.96%;
+	border: 1px #f30; 
+	padding: 20px 0px 20px 18.4px;
 }
+#arrow-scroll-1 {
+	position: absolute;
+	top: 430px;
+	left: 18px;
+}
+#arrow-scroll-2 {
+	position: absolute;
+	top: 430px;
+	left: 248px;
+}
+#arrow-scroll-3 {
+	position: absolute;
+	top: 430px;
+	left: 478px;
+}
+#arrow-scroll-4 {
+	position: absolute;
+	top: 430px;
+	left: 708px;
+}
+
+/* footer */
 #footer-jc {
 	float: left;
-	width: 50%;
+	width: 468px;
 	text-align: center;
 }
 #footer-jc-left {
@@ -370,8 +473,11 @@ header {
 }
 #footer-store-info {
   float: right;
-	width: 50%;
+	width: 470px;
 	text-align: center;
+	border-left: #ccc solid 1px;
+	margin-left: -1px;
+/*	padding-left: 10px; */
 }
 #footer-store-info-left {
 	float: left;
@@ -386,18 +492,27 @@ header {
 	font-size: .76em;
 }
 h1 {
+	font-size: 1.48em;
+	color: #f30;
+	margin-top: 0px;
+  padding-top: 0px;
+}
+h2,h3 {
+  color: #666;
 	font-size: 1.28em;
 	text-align: center;
-}
-h2 {
-  color: #6C1300;
+  margin-top: 0px;
+  padding-top: 0px;
 }
 #bottom-nav {
 	font-size: .76em;
+	clear: both;
 }
 #bottom-nav-left {
   float: left;
+	padding-top: 32px;
 }
 #bottom-nav-right {
   float: right;
+	text-align: right;
 }
