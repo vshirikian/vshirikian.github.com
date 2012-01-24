@@ -11,37 +11,99 @@
 	$("#content-right ul").append("<li><a href='diamonds/4-c/'>Learn About Diamonds</a></li>");
 */
 
-
-var pauseTime = 4000;
-var fadeTime = 800;
+var pauseTime = 6000;
 var t1;
 var t2;
 var t3;
 var t4;
 var interval_id;
 
-function swapContent(old_id, new_id) {
-  $(old_id).fadeOut(fadeTime);
-	$(new_id).delay(fadeTime).fadeIn(fadeTime);
-}
-	
-function delayContent() {
+$("#nav-diamonds").live('mouseenter', function() {
+	$("#nav-bar-line-1").show();
+});
+$("#nav-diamonds").live('mouseleave', function() {
+	$("#nav-bar-line-1").hide();
+});
+
+$("#nav-engagement").live('mouseenter', function() {
+	$("#nav-bar-line-2").show();
+});
+$("#nav-engagement").live('mouseleave', function() {
+	$("#nav-bar-line-2").hide();
+});
+
+$("#nav-custom").live('mouseenter', function() {
+	$("#nav-bar-line-3").show();
+});
+$("#nav-custom").live('mouseleave', function() {
+	$("#nav-bar-line-3").hide();
+});
+
+$("#nav-collections").live('mouseenter', function() {
+	$("#nav-bar-line-4").show();
+});
+$("#nav-collections").live('mouseleave', function() {
+	$("#nav-bar-line-4").hide();
+});
+
+$("#nav-designers").live('mouseenter', function() {
+	$("#nav-bar-line-5").show();
+});
+$("#nav-designers").live('mouseleave', function() {
+	$("#nav-bar-line-5").hide();
+});
+
+$("#nav-our-story").live('mouseenter', function() {
+	$("#nav-bar-line-6").show();
+});
+$("#nav-our-story").live('mouseleave', function() {
+	$("#nav-bar-line-6").hide();
+});
+
+
+function homeOnLoad() {
 	$('.content-main').hide();
 	$('.content-main').removeClass('hidden');
+	
+	$('.nav-bar-line').hide();
 	//$('#arrow-scroll-1').hide();
 	//$('#arrow-scroll-2').hide();
 	//$('#arrow-scroll-3').hide();
 	//$('#arrow-scroll-4').hide();
 	
-  $('#home-storefront').fadeIn(fadeTime);
+  $('#home-storefront').fadeIn('slow');
   swapOnTimeout();
 	interval_id = setInterval(function() {
 	  swapOnTimeout();
   }, 4*pauseTime);	
 	
-	//var t1 = setTimeout("$('#home-storefront').fadeOut(fadeTime)", pauseTime);
-  //$('#home-wedding').fadeIn(fadeTime); 
-	//var t3 = setTimeout("$('#home-wedding').fadeOut(fadeTime)", pauseTime);
+	$("#scroll-store").live('click', function() {
+		clickContent("#home-storefront");
+	});
+	
+	$("#scroll-wedding").live('click', function() {
+		clickContent("#home-wedding");
+	});
+	
+	$("#scroll-diamonds").live('click', function() {
+		clickContent("#home-diamonds");
+	});
+	
+	$("#scroll-custom").live('click', function() {
+		clickContent("#home-custom");
+	});
+}
+
+function diamondsOnLoad() {
+//  $('.content-main').hide();
+//	$('.content-main').removeClass('hidden');
+	
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-1').show();
+	
+	$("#nav-diamonds").live('mouseleave', function() {
+		$("#nav-bar-line-1").show();
+	});
 }
 
 function swapOnTimeout() {
@@ -51,33 +113,22 @@ function swapOnTimeout() {
 	t4 = setTimeout("swapContent('#home-custom', '#home-storefront')", pauseTime*4);
 }
 
+function swapContent(old_id, new_id) {
+  $(old_id).fadeOut('slow');
+	$(new_id).delay('slow').fadeIn('slow');
+}
+
 function clickContent(id) {
-	  clearInterval(interval_id);
+		clearInterval(interval_id);
 		clearTimeout(t1);
 		clearTimeout(t2);
 		clearTimeout(t3);
 		clearTimeout(t4);		
+		$('.content-main').addClass('hidden');
+		$(id).removeClass('hidden');
 		$('.content-main').hide();
 		$(id).fadeIn('slow');
 }
-
-	
-$("#scroll-store").live('click', function() {
-  clickContent("#home-storefront");
-});
-
-$("#scroll-wedding").live('click', function() {
-  clickContent("#home-wedding");
-});
-
-$("#scroll-diamonds").live('click', function() {
-  clickContent("#home-diamonds");
-});
-
-$("#scroll-custom").live('click', function() {
-  clickContent("#home-custom");
-});
-
 
 	/*$("#home-diamonds").delay(2*pauseTime + 4*fadeTime).fadeIn(fadeTime).delay(pauseTime).fadeOut(fadeTime);
 	$("#home-custom").delay(3*pauseTime + 6*fadeTime).fadeIn(fadeTime).delay(pauseTime).fadeOut(fadeTime);

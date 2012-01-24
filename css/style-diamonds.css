@@ -31,7 +31,7 @@ audio:not([controls]) { display: none; }
  * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  */
 
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height: 100% }
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
 body, button, input, select, textarea { font-family: georgia; color: #666; }
 
@@ -304,34 +304,31 @@ body {
   font-size: 1em;
   line-height: 1.4;
   background: url(../img/lb-bg.jpg) top left repeat;
+	height: 1014px;
 }
 .canvas {
 	width: 940px;
-	margin: 0px auto;
-	padding: 0 22px;
-  background-color: white;
-	min-height: 100%;
-}
-.home_height {
 	height: 1014px;
-}
-.diamond_height{
-	height: 920px;
+	margin: 0px auto;
+  padding: 0px 10px;
+  background-color: white;
 }
 header {
 	position: absolute;
 	width: 940px;
-	top: 10px;
+	top: 0px;
+	padding-top: 10px;
 }
 #content {
-	position: absolute;
-	margin: 128px 0px 254px 0px; /* header and footer heights */
-	overflow: auto;
+	position: relative;
+	width: 940px;
+	top: 108px;
+	padding: 20px 0px;
 }
 footer {
 	width: 940px;
 	position: relative;
-	margin: -254px auto 0 auto; /* negative value of footer height */
+	margin-top: 160px; /* negative value of footer height */
 	height: 254px;
 	clear: both;
 }
@@ -343,29 +340,24 @@ body:before {
 	width:0;
 	margin-top:-32767px;/
 }
-<!--[if !IE 7]>
-<style type="text/css">
-		#wrap {display:table;height:100%}
-</style>
-<![endif]-->
 
 /* canvas borders */
 .container {
   position: relative;
 }
 .left-vert-bar {
-  position: fixed;
-	margin-left: -22px; /* bg width + canvas padding */
-	width: 12px;
-	height: 100%;
+  position: absolute;
+	left: -22px;
+  width: 12px;
+	height: 1014px;
   background: url(../img/lb-bg-left.jpg) top left repeat-y;
 }
 .right-vert-bar {
-  position: fixed;
-	margin-left: 952px; /* canvas width + canvas padding */
-	width: 12px;
-	height: 100%;
-  background: url(../img/lb-bg-right.jpg) top left repeat-y;
+  position: absolute;
+	right: -22px;
+  width: 12px;
+	height: 1014px;
+	background: url(../img/lb-bg-right.jpg) top left repeat-y;
 }
 /*
 .horiz-span {
@@ -387,6 +379,7 @@ body:before {
 }
 #contact {
   font-size: .88em;
+	padding-top: 8px;
 	text-align: right;
 }
 #nav-bar {
@@ -397,15 +390,17 @@ body:before {
   width: 16.667%;
   text-align: center;
 }
-.nav-bar-line {
+#nav-bar-line {
   position: absolute
 	height: 3px;
-	top: 100px;
+	top: 110px;
 }
 #nav-bar-line-1, #nav-bar-line-2, #nav-bar-line-3, #nav-bar-line-4, #nav-bar-line-5, #nav-bar-line-6  {
   position: absolute;
+	width: 104px;
 	height: 3px;
-	top: 100px;
+	top: 110px;
+	left: 26px;
 }
 #nav-bar-line-1 {
 	width: 104px;
@@ -432,9 +427,10 @@ body:before {
 	left: 806px;
 }
 
-#diamonds-main-container {
+#diamonds-main-content {
 	position: relative;
-	width: 896px;
+	top: 127px;
+	width: 938px;
 	height: 476px;
 	border: #ccc 1px solid;
   border-radius: 20px;
@@ -451,15 +447,8 @@ body:before {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
 }
-#content-nav {
-	margin-top: 10px;
-  border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	background: #F2F2F2;
-}
 .content-main {
+	position: relative;
 	z-index: 1;
 	padding: 20px;
   border-radius: 20px;
@@ -468,22 +457,35 @@ body:before {
 }
 #content-left {
   float: left;
-	width: 468px;
+	width: 475px;
 	height: 372px;
 }
 #content-right {
   float: right;
 	width: 368px;
 	padding: 20px 10px 20px 40px;
+	height: 332px;
 }
 #home-wedding {
   background: url(../img/home-wedding-bg.jpg) no-repeat;	
 }
-
+#content-nav {
+	position: absolute;
+	width: 938px;
+	height: 182px;
+	top: 432px;
+	text-align: center;
+	margin-top: 10px;
+  border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	background: #F2F2F2;
+}
 .content-nav-item {
 	float: left;
 	border: 1px #f30; 
-	margin: 20px 0px 20px 18.4px;
+	padding: 20px 0px 20px 18.4px;
 }
 #arrow-scroll-1 {
 	position: absolute;
