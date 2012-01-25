@@ -106,6 +106,78 @@ function diamondsOnLoad() {
 	});
 }
 
+function shapesOnLoad() {
+  $('.shapes-large').hide();
+	$('#shapes-round').show();
+	$('.shapes-large').removeClass('hidden');
+	
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-1').show();
+	
+	$("#nav-diamonds").live('mouseleave', function() {
+		$("#nav-bar-line-1").show();
+	});
+	
+	$(".shapes-small").live('mouseenter', function() {
+		split_str = $(this).attr('href').split('\'');
+		swapShapes(split_str[1]);
+	});	
+}
+
+function customOnLoad() {
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-3').show();
+	
+	$("#nav-custom").live('mouseleave', function() {
+		$("#nav-bar-line-3").show();
+	});
+}
+
+function ourStoryOnLoad() {
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-6').show();
+	
+	$("#nav-our-story").live('mouseleave', function() {
+		$("#nav-bar-line-6").show();
+	});	
+}
+
+function weddingOnLoad() {
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-2').show();
+	
+	$("#nav-engagement").live('mouseleave', function() {
+		$("#nav-bar-line-2").show();
+	});
+}
+
+$(document).ready(function(){
+	$(".rounded-border").load(function() {
+		$(this).wrap(function() {
+			return '<span class="' + $(this).attr('class') + '" style="background:url(' + $(this).attr('src') + ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 'px; ' + $(this).attr('style') + '" />';
+		});
+		$(this).hide();
+	});
+});
+
+function jewelryOnLoad() {
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-4').show();
+	
+	$("#nav-collections").live('mouseleave', function() {
+		$("#nav-bar-line-4").show();
+	});
+}
+
+function designersOnLoad() {
+	$('.nav-bar-line').hide();
+	$('#nav-bar-line-5').show();
+	
+	$("#nav-designers").live('mouseleave', function() {
+		$("#nav-bar-line-5").show();
+	});
+}
+
 function swapOnTimeout() {
 	t1 = setTimeout("swapContent('#home-storefront', '#home-wedding')", pauseTime);
 	t2 = setTimeout("swapContent('#home-wedding', '#home-diamonds')", pauseTime*2);
@@ -116,6 +188,13 @@ function swapOnTimeout() {
 function swapContent(old_id, new_id) {
   $(old_id).fadeOut('slow');
 	$(new_id).delay('slow').fadeIn('slow');
+}
+
+function swapShapes(id) {
+  $('.shapes-large').addClass('hidden');
+	$(id).removeClass('hidden');
+	$('.shapes-large').hide();
+	$(id).fadeIn('slow');
 }
 
 function clickContent(id) {

@@ -312,12 +312,6 @@ body {
   background-color: white;
 	min-height: 100%;
 }
-.home_height {
-	height: 1014px;
-}
-.diamond_height{
-	height: 920px;
-}
 header {
 	position: absolute;
 	width: 940px;
@@ -377,6 +371,17 @@ body:before {
 }
 */
 
+.rounded-border {
+	display: inline-block;
+	border: #ccc 1px solid;
+	box-shadow: 4px 4px 4px #666;
+  -moz-box-shadow: 4px 4px 4px #666;
+  -webkit-box-shadow: 4px 4px 4px #666;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+
 /* header */
 #header-left {
 	float: left;
@@ -432,16 +437,133 @@ body:before {
 	left: 806px;
 }
 
+/* diamonds.html */
 #diamonds-main-container {
 	position: relative;
-	width: 896px;
+	width: 900px;
 	height: 476px;
 	border: #ccc 1px solid;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
 }
-/* content */
+.diamond-page-height {
+	height: 920px;
+}
+
+/* diamonds/4-c.html */
+#diamonds-4-c-main-container {
+	width: 900px;
+	height: 580px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	font-size: .8em;
+}
+.four-c-column {
+   width: 23%;
+	 float: left;
+	 padding: 0px 1%;
+}
+.four-c-page-height {
+	height: 1024px;
+}
+
+/* diamonds/shapes.html */
+#diamonds-shapes-main-container {
+	width: 900px;
+	height: 424px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.shapes-page-height {
+	height: 868px;
+}
+#shapes-content-left {
+	width: 46%;
+	float: left;
+	padding: 10px 0px 0px 20px;
+}
+#shapes-content-right {
+	width: 44%;
+	float: right;
+	text-align: center;
+	padding-right: 20px;
+}
+.shapes-small {
+	float: left;
+	width: 18%;
+	padding: 0px 1% 20px 1%;
+	text-align: center;
+	color: #666;
+	font-weight: 580;
+}
+.shapes-large {
+	padding-top: 20px;
+}
+.grey-box {
+	background: #D8D8D8;
+	padding: 20px;
+	margin-top: 20px;
+	font-size: .96em;
+}
+
+/* our-story/our-story.html */
+#our-story-main-container {
+	width: 900px;
+	height: 424px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.our-story-page-height {
+	height: 868px;
+}
+
+/* wedding/wedding.html */
+#wedding-main-container {
+	width: 900px;
+	height: 430px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.wedding-page-height {
+	height: 874px;
+}
+
+/* wedding/engagement-rings.html */
+#rings-main-container {
+	width: 900px;
+	height: 538px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.rings-page-height {
+	height: 988px;
+}
+
+/* wedding/bands.html */
+#bands-main-container {
+	width: 900px;
+	height: 498px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+.bands-page-height {
+	height: 948px;
+}
+
+/* index.html */
 #content-main-container {
 	position: relative;
 	width: 938px;
@@ -450,6 +572,9 @@ body:before {
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
+}
+.home-page-height {
+	height: 1014px;
 }
 #content-nav {
 	margin-top: 10px;
