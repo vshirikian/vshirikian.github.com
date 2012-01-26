@@ -60,6 +60,18 @@ $("#nav-our-story").live('mouseleave', function() {
 	$("#nav-bar-line-6").hide();
 });
 
+$(document).ready(function() {
+	$(".rounded-border").load(function() {
+		$(this).wrap(function() {
+			return '<span class="fade-me ' + $(this).attr('class') + '" style="background:url(' + $(this).attr('src') + 
+			       ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 
+						 'px; ' + $(this).attr('style') + '" />';
+		});
+	  $(this).addClass('hidden');
+	});
+	
+});
+
 
 function homeOnLoad() {
 	$('.content-main').hide();
@@ -140,6 +152,10 @@ function ourStoryOnLoad() {
 	$("#nav-our-story").live('mouseleave', function() {
 		$("#nav-bar-line-6").show();
 	});	
+	
+	// fade in images with rounded-borders
+  $(".rounded-border").hide();
+  $(".rounded-border").fadeIn('slow');	
 }
 
 function weddingOnLoad() {
@@ -149,16 +165,11 @@ function weddingOnLoad() {
 	$("#nav-engagement").live('mouseleave', function() {
 		$("#nav-bar-line-2").show();
 	});
+	
+	// fade in images with rounded-borders
+  $(".rounded-border").hide();
+  $(".rounded-border").fadeIn('slow');	
 }
-
-$(document).ready(function(){
-	$(".rounded-border").load(function() {
-		$(this).wrap(function() {
-			return '<span class="' + $(this).attr('class') + '" style="background:url(' + $(this).attr('src') + ') no-repeat center center; width: ' + $(this).width() + 'px; height: ' + $(this).height() + 'px; ' + $(this).attr('style') + '" />';
-		});
-		$(this).hide();
-	});
-});
 
 function jewelryOnLoad() {
 	$('.nav-bar-line').hide();
@@ -167,6 +178,10 @@ function jewelryOnLoad() {
 	$("#nav-collections").live('mouseleave', function() {
 		$("#nav-bar-line-4").show();
 	});
+		
+	// fade in images with rounded-borders
+  $(".rounded-border").hide();
+  $(".rounded-border").fadeIn('slow');	
 }
 
 function designersOnLoad() {
@@ -176,6 +191,10 @@ function designersOnLoad() {
 	$("#nav-designers").live('mouseleave', function() {
 		$("#nav-bar-line-5").show();
 	});
+	
+	// fade in images with rounded-borders
+  $(".rounded-border").hide();
+  $(".rounded-border").fadeIn('slow');	
 }
 
 function swapOnTimeout() {

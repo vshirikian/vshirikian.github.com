@@ -511,6 +511,124 @@ body:before {
 	font-size: .96em;
 }
 
+/* diamonds/inventory.html */
+#diamonds-inventory-main-container {
+	width: 860px;
+	height: 860px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding-left: 60px;
+}
+.inventory-page-height {
+	height: 1304px;
+}
+
+/* jewelry/jewelry.html */
+#jewelry-main-container {
+	width: 868px;
+	height: 426px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 20px 36px;
+}
+.jewelry-page-height {
+	height: 870px;
+}
+#jewelry-content-left {
+	width: 54%;
+	float: left;
+}
+#jewelry-content-right {
+	width: 46%;
+	float: right;
+	text-align: center;
+	padding-top: 20px;
+}
+#jewelry-rings-href {
+  position: absolute;
+	top: 288px;
+	left: 40px;
+	text-align: center;
+}
+#jewelry-pendants-href {
+  position: absolute;
+	top: 288px;
+	left: 132px;
+	text-align: center;
+}
+#jewelry-bracelets-href {
+  position: absolute;
+	top: 288px;
+	left: 216px;
+	text-align: center;
+}
+#jewelry-earrings-href {
+  position: absolute;
+	top: 288px;
+	left: 354px;
+	text-align: center;
+}
+
+/* jewelry/rings.html */
+#jewelry-rings-main-container {
+	width: 900px;
+	height: 508px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding-bottom: 40px;
+}
+.jewelry-rings-page-height {
+	height: 968px;
+}
+
+/* jewelry/pendants.html */
+#jewelry-pendants-main-container {
+	width: 900px;
+	height: 488px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding-bottom: 40px;
+}
+.jewelry-pendants-page-height {
+	height: 948px;
+}
+
+/* jewelry/bracelets.html */
+#jewelry-bracelets-main-container {
+	width: 900px;
+	height: 508px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding-bottom: 40px;
+}
+.jewelry-bracelets-page-height {
+	height: 968px;
+}
+
+/* jewelry/earrings.html */
+#jewelry-earrings-main-container {
+	width: 900px;
+	height: 488px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding-bottom: 40px;
+}
+.jewelry-earrings-page-height {
+	height: 948px;
+}
+
 /* our-story/our-story.html */
 #our-story-main-container {
 	width: 900px;
@@ -522,6 +640,21 @@ body:before {
 }
 .our-story-page-height {
 	height: 868px;
+}
+
+/* business/appointment.html */
+#appointment-main-container {
+	width: 940px;
+	height: 500px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 0px;
+	text-align: left;
+}
+.appointment-page-height {
+	height: 904px;
 }
 
 /* wedding/wedding.html */
@@ -561,6 +694,82 @@ body:before {
 }
 .bands-page-height {
 	height: 948px;
+}
+
+/* designers/designers.html */
+#designers-main-container {
+	width: 864px;
+	height: 440px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	font-size: .8em;
+	padding: 26px 38px 38px 38px;
+}
+.designers-page-height {
+	height: 904px;
+}
+.designers-column {
+   width: 190px;
+	 float: left;
+	 padding: 0px 13.8px;
+}
+
+/* designers/simon-g.html */
+#designers-simon-g-main-container {
+	width: 864px;
+	height: 490px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 26px 38px 38px 38px;
+}
+.designers-simon-g-page-height {
+	height: 954px;
+}
+
+/* designers/pamela-froman.html */
+#designers-pamela-froman-main-container {
+	width: 864px;
+	height: 528px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 26px 38px 38px 38px;
+}
+.designers-pamela-froman-page-height {
+	height: 992px;
+}
+
+/* designers/tycoon.html */
+#designers-tycoon-main-container {
+	width: 864px;
+	height: 528px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 26px 38px 38px 38px;
+}
+.designers-tycoon-page-height {
+	height: 992px;
+}
+
+/* designers/simon-g.html */
+#designers-royal-asscher-main-container {
+	width: 864px;
+	height: 528px;
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	padding: 26px 38px 38px 38px;
+}
+.designers-royal-asscher-page-height {
+	height: 992px;
 }
 
 /* index.html */
