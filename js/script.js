@@ -74,16 +74,12 @@ $(document).ready(function() {
 
 
 function homeOnLoad() {
-	$('.content-main').hide();
-	$('.content-main').removeClass('hidden');
-	
 	$('.nav-bar-line').hide();
-	//$('#arrow-scroll-1').hide();
-	//$('#arrow-scroll-2').hide();
-	//$('#arrow-scroll-3').hide();
-	//$('#arrow-scroll-4').hide();
+	$('#home-wedding').hide();
+	$('#home-diamonds').hide();
+	$('#home-custom').hide();
+	$('.content-swap').removeClass('hidden');	
 	
-  $('#home-storefront').fadeIn('slow');
   swapOnTimeout();
 	interval_id = setInterval(function() {
 	  swapOnTimeout();
@@ -107,9 +103,6 @@ function homeOnLoad() {
 }
 
 function diamondsOnLoad() {
-//  $('.content-main').hide();
-//	$('.content-main').removeClass('hidden');
-	
 	$('.nav-bar-line').hide();
 	$('#nav-bar-line-1').show();
 	
@@ -120,8 +113,8 @@ function diamondsOnLoad() {
 
 function shapesOnLoad() {
   $('.shapes-large').hide();
-	$('#shapes-round').show();
 	$('.shapes-large').removeClass('hidden');
+	$('#shapes-round').show();
 	
 	$('.nav-bar-line').hide();
 	$('#nav-bar-line-1').show();
@@ -154,8 +147,8 @@ function ourStoryOnLoad() {
 	});	
 	
 	// fade in images with rounded-borders
-  $(".rounded-border").hide();
-  $(".rounded-border").fadeIn('slow');	
+  //$(".rounded-border").hide();
+  //$(".rounded-border").fadeIn('slow');	
 }
 
 function weddingOnLoad() {
@@ -167,8 +160,8 @@ function weddingOnLoad() {
 	});
 	
 	// fade in images with rounded-borders
-  $(".rounded-border").hide();
-  $(".rounded-border").fadeIn('slow');	
+  //$(".rounded-border").hide();
+  //$(".rounded-border").fadeIn('slow');	
 }
 
 function jewelryOnLoad() {
@@ -180,8 +173,8 @@ function jewelryOnLoad() {
 	});
 		
 	// fade in images with rounded-borders
-  $(".rounded-border").hide();
-  $(".rounded-border").fadeIn('slow');	
+  //$(".rounded-border").hide();
+  //$(".rounded-border").fadeIn('slow');	
 }
 
 function designersOnLoad() {
@@ -193,8 +186,16 @@ function designersOnLoad() {
 	});
 	
 	// fade in images with rounded-borders
-  $(".rounded-border").hide();
-  $(".rounded-border").fadeIn('slow');	
+  //$(".rounded-border").hide();
+  //$(".rounded-border").fadeIn('slow');	
+}
+
+function defaultOnLoad() {
+	$('.nav-bar-line').hide();
+		
+	// fade in images with rounded-borders
+  //$(".rounded-border").hide();
+  //$(".rounded-border").fadeIn('slow');	
 }
 
 function swapOnTimeout() {
@@ -222,9 +223,9 @@ function clickContent(id) {
 		clearTimeout(t2);
 		clearTimeout(t3);
 		clearTimeout(t4);		
-		$('.content-main').addClass('hidden');
+		$('.content-swap').addClass('hidden');
 		$(id).removeClass('hidden');
-		$('.content-main').hide();
+		$('.content-swap').hide();
 		$(id).fadeIn('slow');
 }
 
@@ -242,7 +243,7 @@ function clickContent(id) {
 	/*
 	$("#scroll-diamonds").live('click', function() {
 		window.clearInterval(intervalID);
-		$('.content-main').addClass('hidden');
+		$('.content-swap').addClass('hidden');
 		$("#home-diamonds").removeClass('hidden').hide().fadeIn('slow');
 	});
 	*/

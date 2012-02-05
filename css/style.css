@@ -208,25 +208,6 @@ td {
 }
 
 
-/* ==|== primary styles =====================================================
-   Author:
-   ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
    These override the primary ('mobile first') styles
@@ -242,7 +223,6 @@ td {
   /* Style adjustments for viewports 768px and over go here */
 
 }
-
 
 
 /* ==|== non-semantic helper classes ========================================
@@ -271,7 +251,6 @@ td {
 .clearfix { zoom: 1; }
 
 
-
 /* ==|== print styles =======================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -292,7 +271,16 @@ td {
   h2, h3 { page-break-after: avoid; }
 }
 
-/* LB CUSTOM*/
+
+/* ==|== primary styles =====================================================
+   Author: vache-sqaured
+   ========================================================================== *
+
+/* shared layout style */
+* { /* apply a natural box layout model to all elements */
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box; 
+}
 body {
   position: absolute;
   top: 0px;
@@ -306,75 +294,389 @@ body {
   background: url(../img/lb-bg.jpg) top left repeat;
 }
 .canvas {
-	width: 940px;
+	width: 964px;
 	margin: 0px auto;
-	padding: 0 22px;
+	padding: 0px 12px;
   background-color: white;
 	min-height: 100%;
+	/* ie7 sticky footer fix */
+	height: 100%;
+	display: table;
 }
 header {
 	position: absolute;
 	width: 940px;
-	top: 10px;
+	margin-top: 10px;
 }
 #content {
 	position: absolute;
-	margin: 128px 0px 254px 0px; /* header and footer heights */
+	margin: 126px 0px 204px 0px; /* header and footer heights */
 	overflow: auto;
 }
 footer {
-	width: 940px;
 	position: relative;
-	margin: -254px auto 0 auto; /* negative value of footer height */
-	height: 254px;
+	width: 940px;
+	margin: -204px auto 0 auto; /* negative value of footer height */
+	height: 204px;
 	clear: both;
 }
-
-<!--[if !IE 7]>
-<style type="text/css">
-		#wrap {display:table;height:100%}
-</style>
-<![endif]-->
-
-/* canvas borders */
 .container {
   position: relative;
 }
+.rounded-shadow {
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+	box-shadow: 4px 4px 4px #666;
+  -moz-box-shadow: 4px 4px 4px #666;
+  -webkit-box-shadow: 4px 4px 4px #666;
+}
+.rounded-border {
+	border: #ccc 1px solid;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
+h1,h2 {
+	font-size: 26px;
+	color: #f30;
+	margin: 0px;
+  padding: 0px;
+}
+h3 {
+  color: #666;
+	font-size: 20px;
+	text-align: center;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+h4 {
+  color: #666;
+	font-size: 22px;
+	text-align: left;
+  margin: 0px;
+  padding: 0px;
+	font-variant:small-caps;
+}
+p {
+ margin: 10px 0px 0px 0px;
+}
+/* canvas borders */
 .left-vert-bar {
   position: fixed;
-	margin-left: -22px; /* bg width + canvas padding */
+	margin-left: -24px; /* bg width + canvas padding */
 	width: 12px;
 	height: 100%;
   background: url(../img/lb-bg-left.jpg) top left repeat-y;
 }
 .right-vert-bar {
   position: fixed;
-	margin-left: 952px; /* canvas width + canvas padding */
+	margin-left: 952px; /* canvas width - bg width */
 	width: 12px;
 	height: 100%;
   background: url(../img/lb-bg-right.jpg) top left repeat-y;
 }
-/*
-.horiz-span {
-	position: absolute;
-	left: 0px;
-	width: 100%;
-	padding: 10px 0px;
-	background: #EFEFEF left repeat;
-}
-*/
 
-.rounded-border {
-	display: inline-block;
-	border: #ccc 1px solid;
+/* /index/ */
+#home-main-container {
+	width: 940px;
+	height: 414px;
+}
+.home-page-height {
+	height: 954px;
+}
+.content-swap {
+	height: 100%;
+	padding: 20px;
   border-radius: 20px;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-/*
-	box-shadow: 4px 4px 4px #666;
-  -moz-box-shadow: 4px 4px 4px #666;
-  -webkit-box-shadow: 4px 4px 4px #666;
-*/
+}
+#home-content-left {
+	z-index: 1;
+  float: left;
+	width: 476px;
+}
+#home-content-right {
+	padding: 20px 10px;
+  float: right;
+	width: 400px;
+}
+#home-wedding {
+  background: url(../img/home-wedding-bg.jpg) no-repeat;
+}
+#main-nav {
+	margin-top: 10px;
+	background: #E5E5E5;
+}
+.main-nav-item {
+	float: left;
+	border: 1px #f30; 
+	margin: 20px 0px 20px 18.4px;
+}
+#arrow-scroll-1 {
+	position: absolute;
+	top: 433px;
+	left: 18px;
+}
+#arrow-scroll-2 {
+	position: absolute;
+	top: 433px;
+	left: 248px;
+}
+#arrow-scroll-3 {
+	position: absolute;
+	top: 433px;
+	left: 478px;
+}
+#arrow-scroll-4 {
+	position: absolute;
+	top: 433px;
+	left: 708px;
+}
+
+/* /diamonds/ */
+#diamonds-main-container {
+	width: 940px;
+	padding: 20px 20px 10px 20px;
+}
+.diamond-page-height {
+	height: 816px;
+}
+#diamonds-content-left {
+	padding: 0px 20px 0px 10px;
+  float: left;
+	width: 400px;
+}
+#diamonds-content-right {
+  float: right;
+	width: 490px;
+	padding: 30px 20px 0px 0px;
+}
+
+/* /diamonds/4-c/ */
+#four-c-main-container {
+	width: 940px;
+	padding: 20px 20px 20px 30px;
+	font-size: .88em;
+}
+.four-c-column {
+   width: 25%;
+	 float: left;
+	 padding: 4px 10px;
+}
+.four-c-page-height {
+	height: 976px;
+}
+
+/* /diamonds/shapes/ */
+#shapes-main-container {
+	width: 940px;
+	height: 444px;
+	padding: 20px;
+}
+.shapes-page-height {
+	height: 790px;
+}
+#shapes-content-left {
+	width: 46%;
+	float: left;
+	padding-left: 10px;
+}
+#shapes-content-right {
+	width: 50%;
+	float: right;
+	text-align: center;
+	padding: 6px 60px 0px 40px;
+}
+.shapes-small {
+	float: left;
+	width: 20%;
+	padding-top: 10px;
+	text-align: center;
+	color: #4E4E4E;
+}
+.grey-box {
+	background: #E5E5E5;
+	padding: 16px 24px 22px 30px;
+	font-size: .96em;
+	text-align: left;
+}
+
+/* /diamonds/inventory/ */
+#inventory-main-container {
+	width: 940px;
+	padding: 20px 0px 20px 30px;
+}
+.inventory-page-height {
+	height: 1226px;
+}
+#iframeRapnet {
+	padding: 0px 0px 20px 34px; 
+	background-color:#e5e5e5;
+}
+
+/* /wedding/ */
+#wedding-main-container {
+	width: 940px;
+	height: 100%;
+  padding: 20px 0px 20px 30px;
+}
+.wedding-page-height {
+	height: 786px;
+}
+#wedding-content-left {
+  float: left; 
+	width: 56%;
+}
+#wedding-content-right {
+  float: right;
+	margin: 10px 70px 0px 0px;
+}
+
+/* /custom/ */
+#custom-main-container {
+	width: 940px;
+	height: 444px;
+	padding: 20px 30px;
+}
+.custom-page-height {
+	height: 790px;
+}
+
+/* /jewelry/ */
+#jewelry-main-container {
+	width: 940px;
+	padding: 20px 0px 20px 30px;
+}
+.jewelry-page-height {
+	height: 814px;
+}
+#jewelry-content-left {
+	width: 50%;
+	float: left;
+}
+#jewelry-content-right {
+	width: 48%;
+	float: right;
+	text-align: center;
+	padding: 10px 20px 0px 0px;
+}
+#jewelry-adjectives {
+  color: #666;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.jewelry-href {
+  float: left;
+  padding: 0px 2px;
+	text-align: center;
+}
+
+/* /jewelry/*... collections height */
+#jewelry-collections-main-container {
+	width: 940px;
+	height: 532px;
+	padding: 20px 30px 20px 30px;
+}
+.jewelry-collections-page-height {
+	height: 876px;
+}
+
+/* /designers/ */
+#designers-main-container {
+	width: 940px;
+	padding: 20px 30px;
+	font-size: .88em;
+}
+.designers-page-height {
+	height: 846px;
+}
+.designers-column {
+  width: 25%;
+  float: left;
+  padding: 0px 15px;
+}
+.designer-heading {
+	font-size: 18px;
+  text-align: center; 
+	margin-top: 10px;
+}
+
+/* /designers/simon-g/ */
+#designers-simon-g-main-container {
+	width: 940px;
+	height: 506px;
+	padding: 20px 30px;
+}
+.designers-simon-g-page-height {
+	height: 850px;
+}
+
+/* /designers/pamela-froman/ */
+#designers-pamela-froman-main-container {
+	width: 940px;
+	height: 531px;
+	padding: 20px 30px;
+}
+.designers-pamela-froman-page-height {
+	height: 881px;
+}
+
+/* /designers/tycoon/ */
+#designers-tycoon-main-container {
+	width: 940px;
+	height: 531px;
+	padding: 20px 30px;
+}
+.designers-tycoon-page-height {
+	height: 881px;
+}
+
+/* /designers/royal-asscher/ */
+#designers-royal-asscher-main-container {
+	width: 940px;
+	height: 531px;
+	padding: 20px 30px;
+}
+.designers-royal-asscher-page-height {
+	height: 881px;
+}
+
+/* /our-story/ */
+#our-story-main-container {
+	width: 940px;
+	height: 864px;
+	padding: 20px 30px;
+}
+.our-story-page-height {
+	height: 1210px;
+}
+
+/* /appointment/ */
+#appointment-main-container {
+	width: 940px;
+}
+.appointment-page-height {
+	height: 850px;
+}
+
+/* /privacy/ */
+#privacy-main-container {
+	width: 940px;
+	padding: 20px 30px;
+}
+.privacy-page-height {
+	height: 2540px;
+}
+
+/* /sitemap/ */
+#sitemap-main-container {
+	width: 940px;
+	padding: 20px 30px;
+}
+.sitemap-page-height {
+	height: 918px;
 }
 
 /* header */
@@ -397,10 +699,20 @@ footer {
   width: 16.667%;
   text-align: center;
 }
+#nav-custom {
+	margin-left: 18px;
+}
+#nav-collections {
+	margin-left: 36px;
+}
+#nav-designers {
+	margin-left: 30px;
+}
 .nav-bar-line {
   position: absolute
 	height: 3px;
 	top: 100px;
+	display: none;
 }
 #nav-bar-line-1, #nav-bar-line-2, #nav-bar-line-3, #nav-bar-line-4, #nav-bar-line-5, #nav-bar-line-6  {
   position: absolute;
@@ -417,517 +729,73 @@ footer {
 }
 #nav-bar-line-3 {
 	width: 136px;
-	left: 324px;
+	left: 333px;
 }
 #nav-bar-line-4 {
 	width: 130px;
-	left: 482px;
+	left: 502px;
 }
 #nav-bar-line-5 {
 	width: 110px;
-	left: 648px;
+	left: 665px;
 }
 #nav-bar-line-6 {
 	width: 108px;
 	left: 806px;
 }
-
-/* diamonds.html */
-#diamonds-main-container {
-	position: relative;
-	width: 900px;
-	height: 476px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.diamond-page-height {
-	height: 920px;
-}
-
-/* diamonds/4-c.html */
-#diamonds-4-c-main-container {
-	width: 900px;
-	height: 580px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	font-size: .8em;
-}
-.four-c-column {
-   width: 23%;
-	 float: left;
-	 padding: 0px 1%;
-}
-.four-c-page-height {
-	height: 1024px;
-}
-
-/* diamonds/shapes.html */
-#diamonds-shapes-main-container {
-	width: 900px;
-	height: 424px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.shapes-page-height {
-	height: 868px;
-}
-#shapes-content-left {
-	width: 46%;
-	float: left;
-	padding: 10px 0px 0px 20px;
-}
-#shapes-content-right {
-	width: 44%;
-	float: right;
-	text-align: center;
-	padding-right: 20px;
-}
-.shapes-small {
-	float: left;
-	width: 18%;
-	padding: 0px 1% 20px 1%;
-	text-align: center;
-	color: #666;
-	font-weight: 580;
-}
-.shapes-large {
-	padding-top: 20px;
-}
-.grey-box {
-	background: #D8D8D8;
-	padding: 20px;
-	margin-top: 20px;
-	font-size: .96em;
-}
-
-/* diamonds/inventory.html */
-#diamonds-inventory-main-container {
-	width: 888px;
-	height: 860px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-left: 30px;
-}
-.inventory-page-height {
-	height: 1304px;
-}
-
-/* jewelry/jewelry.html */
-#jewelry-main-container {
-	width: 868px;
-	height: 426px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 20px 36px;
-}
-.jewelry-page-height {
-	height: 870px;
-}
-#jewelry-content-left {
-	width: 54%;
-	float: left;
-}
-#jewelry-content-right {
-	width: 46%;
-	float: right;
-	text-align: center;
-	padding-top: 20px;
-}
-#jewelry-rings-href {
-  position: absolute;
-	top: 288px;
-	left: 40px;
-	text-align: center;
-}
-#jewelry-pendants-href {
-  position: absolute;
-	top: 288px;
-	left: 132px;
-	text-align: center;
-}
-#jewelry-bracelets-href {
-  position: absolute;
-	top: 288px;
-	left: 216px;
-	text-align: center;
-}
-#jewelry-earrings-href {
-  position: absolute;
-	top: 288px;
-	left: 354px;
-	text-align: center;
-}
-
-/* jewelry/rings.html */
-#jewelry-rings-main-container {
-	width: 900px;
-	height: 508px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-bottom: 40px;
-}
-.jewelry-rings-page-height {
-	height: 968px;
-}
-
-/* jewelry/pendants.html */
-#jewelry-pendants-main-container {
-	width: 900px;
-	height: 488px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-bottom: 40px;
-}
-.jewelry-pendants-page-height {
-	height: 948px;
-}
-
-/* jewelry/bracelets.html */
-#jewelry-bracelets-main-container {
-	width: 900px;
-	height: 508px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-bottom: 40px;
-}
-.jewelry-bracelets-page-height {
-	height: 968px;
-}
-
-/* jewelry/earrings.html */
-#jewelry-earrings-main-container {
-	width: 900px;
-	height: 488px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-bottom: 40px;
-}
-.jewelry-earrings-page-height {
-	height: 948px;
-}
-
-/* wedding/wedding.html */
-#wedding-main-container {
-	width: 900px;
-	height: 430px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.wedding-page-height {
-	height: 874px;
-}
-
-/* wedding/engagement-rings.html */
-#rings-main-container {
-	width: 900px;
-	height: 538px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.rings-page-height {
-	height: 988px;
-}
-
-/* wedding/bands.html */
-#bands-main-container {
-	width: 900px;
-	height: 498px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.bands-page-height {
-	height: 948px;
-}
-
-/* designers/designers.html */
-#designers-main-container {
-	width: 864px;
-	height: 440px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	font-size: .8em;
-	padding: 26px 38px 38px 38px;
-}
-.designers-page-height {
-	height: 904px;
-}
-.designers-column {
-   width: 190px;
-	 float: left;
-	 padding: 0px 13px;
-}
-
-/* designers/simon-g.html */
-#designers-simon-g-main-container {
-	width: 904px;
-	height: 460px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 10px 18px 38px 18px;
-}
-.designers-simon-g-page-height {
-	height: 924px;
-}
-
-/* designers/pamela-froman.html */
-#designers-pamela-froman-main-container {
-	width: 864px;
-	height: 528px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 26px 38px 38px 38px;
-}
-.designers-pamela-froman-page-height {
-	height: 992px;
-}
-
-/* designers/tycoon.html */
-#designers-tycoon-main-container {
-	width: 864px;
-	height: 528px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 26px 38px 38px 38px;
-}
-.designers-tycoon-page-height {
-	height: 992px;
-}
-
-/* designers/simon-g.html */
-#designers-royal-asscher-main-container {
-	width: 864px;
-	height: 528px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 26px 38px 38px 38px;
-}
-.designers-royal-asscher-page-height {
-	height: 992px;
-}
-
-/* our-story/our-story.html */
-#our-story-main-container {
-	width: 900px;
-	height: 424px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.our-story-page-height {
-	height: 868px;
-}
-
-/* our-story/appointment.html */
-#appointment-main-container {
-	width: 940px;
-	height: 480px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding: 0px;
-	text-align: left;
-}
-.appointment-page-height {
-	height: 884px;
-}
-
-/* our-story/privacy.html */
-#privacy-main-container {
-	width: 888px;
-	height: 2112px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-left: 30px;
-}
-.privacy-page-height {
-	height: 2554px;
-}
-
-/* our-story/sitemap.html */
-#sitemap-main-container {
-	width: 888px;
-	height: 532px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	padding-left: 30px;
-}
-.sitemap-page-height {
-	height: 974px;
-}
-
-/* index.html */
-#content-main-container {
-	position: relative;
-	width: 938px;
-	height: 412px;
-	border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-.home-page-height {
-	height: 1014px;
-}
-#content-nav {
-	margin-top: 10px;
-  border: #ccc 1px solid;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-	background: #F2F2F2;
-}
-.content-main {
-	z-index: 1;
-	padding: 20px;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-}
-#content-left {
-  float: left;
-	width: 468px;
-	height: 372px;
-}
-#content-right {
-  float: right;
-	width: 368px;
-	padding: 20px 10px 20px 40px;
-}
-#home-wedding {
-  background: url(../img/home-wedding-bg.jpg) no-repeat;	
-}
-
-.content-nav-item {
-	float: left;
-	border: 1px #f30; 
-	margin: 20px 0px 20px 18.4px;
-}
-#arrow-scroll-1 {
-	position: absolute;
-	top: 430px;
-	left: 18px;
-}
-#arrow-scroll-2 {
-	position: absolute;
-	top: 430px;
-	left: 248px;
-}
-#arrow-scroll-3 {
-	position: absolute;
-	top: 430px;
-	left: 478px;
-}
-#arrow-scroll-4 {
-	position: absolute;
-	top: 430px;
-	left: 708px;
+.fb-like {
+	margin-right:-4px; 
+	vertical-align:bottom;
 }
 
 /* footer */
 #footer-jc {
 	float: left;
-	width: 468px;
+	width: 50%;
 	text-align: center;
 }
 #footer-jc-left {
 	float: left;
-	width: 40%;
+	width: 50%;
 	text-align: left;
 	padding-left: 10%;
 }
 #footer-jc-right {
 	float: right;
-	width: 36%;
+	width: 50%;
 	text-align: left;
 	padding-left: 14%;
 }
 #footer-store-info {
   float: right;
-	width: 470px;
+	width: 50%;
 	text-align: center;
 	border-left: #ccc solid 1px;
 	margin-left: -1px;
-/*	padding-left: 10px; */
 }
 #footer-store-info-left {
 	float: left;
 	width: 50%;
+	padding-left: 10px;
 	text-align: center;
 }
 #footer-store-info-right {
 	float: right;
-	width: 46%;
-	padding-left: 4%;
+	width: 50%;
+	padding-left: 10px;
 	text-align: center;
-	font-size: .76em;
-}
-h1 {
-	font-size: 1.48em;
-	color: #f30;
-	margin-top: 0px;
-  padding-top: 0px;
-}
-h2,h3 {
-  color: #666;
-	font-size: 1.28em;
-	text-align: center;
-  margin-top: 0px;
-  padding-top: 0px;
+	font-size: 12px;
 }
 #bottom-nav {
-	font-size: .76em;
+	font-size: 11px;
 	clear: both;
 }
 #bottom-nav-left {
   float: left;
-	padding-top: 32px;
+	padding-top: 10px;
 }
 #bottom-nav-right {
   float: right;
 	text-align: right;	
-	padding-top: 32px;
-}
-#bottom-nav-right-content {
-	float: right;
-	text-align: right;	
+	padding-top: 10px;
 }
